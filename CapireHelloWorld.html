@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>CapireHelloWorld</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {  background-color: #f8f8f8; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ef2929; } /* Alert */
+    code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #c4a000; } /* Attribute */
+    code span.bn { color: #0000cf; } /* BaseN */
+    code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4e9a06; } /* Char */
+    code span.cn { color: #000000; } /* Constant */
+    code span.co { color: #8f5902; font-style: italic; } /* Comment */
+    code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+    code span.dt { color: #204a87; } /* DataType */
+    code span.dv { color: #0000cf; } /* DecVal */
+    code span.er { color: #a40000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #0000cf; } /* Float */
+    code span.fu { color: #000000; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+    code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+    code span.ot { color: #8f5902; } /* Other */
+    code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+    code span.sc { color: #000000; } /* SpecialChar */
+    code span.ss { color: #4e9a06; } /* SpecialString */
+    code span.st { color: #4e9a06; } /* String */
+    code span.va { color: #000000; } /* Variable */
+    code span.vs { color: #4e9a06; } /* VerbatimString */
+    code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style type="text/css">*{margin:0;padding:0;}
+body {
+font:13.34px helvetica,arial,freesans,clean,sans-serif;
+color:black;
+line-height:1.4em;
+background-color: #F8F8F8;
+padding: 0.7em;
+}
+p {
+margin:1em 0;
+line-height:1.5em;
+}
+table {
+font-size:inherit;
+font:100%;
+margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}
+pre {
+margin:1em 0;
+font-size:12px;
+background-color:#eee;
+border:1px solid #ddd;
+padding:5px;
+line-height:1.5em;
+color:#444;
+overflow:auto;
+-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+padding:0;
+font-size:12px;
+background-color:#eee;
+border:none;
+}
+code {
+font-size:12px;
+background-color:#f8f8ff;
+color:#444;
+padding:0 .2em;
+border:1px solid #dedede;
+}
+img{border:0;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:1.5em;}
+h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:1.5em;border-top:4px solid #e0e0e0;padding-top:.5em;}
+h3{margin-top:1em;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+sup {
+font-size: 0.83em;
+vertical-align: super;
+line-height: 0;
+}
+* {
+-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+body {
+width: 854px;
+margin:0 auto;
+}
+}
+@media print {
+table, pre {
+page-break-inside: avoid;
+}
+pre {
+word-wrap: break-word;
+}
+}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+  
+  
+  
+  
+</head>
+<body>
+<h1 id="capire-helloworld">Capire HelloWorld</h1>
+<p>Ora che hai eseguito il programma <em>HelloWorld</em>, vediamo come funziona.</p>
+<p>Ecco nuovamente il codice sorgente:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co">/**</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a> <span class="co">*</span> La classe HelloWorld è un programma che</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a> <span class="co">*</span> stampa la stringa “HelloWorld<span class="co">!!</span>” sullo standard output<span class="co">.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a> <span class="co">*/</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> HelloWorld {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a><span class="co">// Display &quot;Hello World!&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;HelloWorld!!&quot;</span>);</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Il programma HelloWorld si compone di tre parti principali:</p>
+<ul>
+<li><p><strong>I commenti</strong></p></li>
+<li><p><strong>La definizione della classe HelloWorld</strong></p></li>
+<li><p><strong>Il metodo main</strong></p></li>
+</ul>
+<h2 id="i-commenti">I commenti</h2>
+<p>I commenti sono ignorati dal compilatore ma sono utilizzati dai programmatori per lasciare delle indicazioni nel codice sorgente. Nel codice sorgente di HelloWorld troviamo due tipi differenti di commenti:</p>
+<h3 id="commenti-su-una-o-più-righe">Commenti su una o più righe</h3>
+<p>Il commento inizia con <code>/*</code> e termina con <code>*/</code>.</p>
+<p>Esempi:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co">/* mio commento. */</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="co">/* </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="co">    il mio commento</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="co">    su tre</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="co">    righe</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="co">*/</span></span></code></pre></div>
+<h3 id="commenti-su-una-sola-riga">Commenti su una sola riga</h3>
+<p>Il commento inizia con <code>//</code> e termina alla fine della riga. Esempi:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co">// il mio commento.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;HelloWorld!!&quot;</span>); <span class="co">// un altro commento</span></span></code></pre></div>
+<h2 id="la-definizione-della-classe">La definizione della classe</h2>
+<p>La definizione della classe <code>HelloWorld</code> è la seguente:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">public</span> <span class="kw">class</span> HelloWorld {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>    <span class="co">//... corpo della classe</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Secondo quanto mostrato nel riquadro precedente, il modo più semplice di definire una classe in Java è:</p>
+<p><strong><code>class</code></strong> <strong>&lt;</strong><code>NomeClasse</code><strong>&gt;<code>{</code><br> …<br> <code>}</code></strong></p>
+<p>La parola chiave <strong><code>class</code></strong> viene posta all’inizio della definizione della classe nominata <strong><code>NomeClasse</code></strong>, e il codice della classe viene scritto nel <em>blocco</em> definito dalle parentesi di apertura <strong><code>{</code></strong> e la parentesi di chiusura <strong><code>}</code></strong>.</p>
+<p>Ad esempio per definire una classe che si chiami <em>Prova</em>, scriveremo:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="kw">class</span> Prova{</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    <span class="co">// corpo della classe</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>}</span></code></pre></div>
+<h2 id="il-metodo-main">Il metodo main</h2>
+<p>Ecco la dichiarazione del metodo <em>main</em>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span>(<span class="bu">String</span>[] args) {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>    <span class="co">// corpo del metodo  </span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Nel linguaggio di programmazione Java ogni programma deve contenere un metodo <em>main</em>. La dichiarazione del metodo <em>main</em> è appunto:</p>
+<p><strong>public static void main(String[] args) {…}</strong></p>
+<p>Le parole risevate <em>public</em> e <em>static</em> possono essere scritte come <em>public static</em> oppure nell’ordine inverso <em>static public</em>, ma è convenzione utilizzare la forma <em>public static</em> come mostrato nell’esempio.</p>
+<p>Si può dare all’<em>argomento</em> qualsiasi nome, ma generalmente i programmatori scelgono il nome <em>args</em> o <em>argv</em>.</p>
+<p>Tutti gli altri elementi della dichiarazione devono essere scritti esattamente come mostrato nell’esempio; quando scrivi un programma ricordati che Java è <em>case sensitive</em> ossia è sensibile al caso dei caratteri (‘A’ è diverso da ‘a’).</p>
+<p>Il metodo <em>main</em> è simile alla funzione <em>main</em> dei linguaggi C e C++ ed è il <em>punto d’inizio</em> di ogni programma Java; è infatti il <em>main</em> che invoca la sequenza di istruzioni che costituiscono il programma.</p>
+<p>Il metodo <em>main</em> accetta un singolo argomento: un <em>array</em> di elementi di tipo <em>String</em>.</p>
+<p><code>public static void main(</code><strong>String[] args</strong><code>) {</code></p>
+<p>Questo array è il meccanismo attraverso il quale il sistema operativo passa delle informazioni al programma. Ogni stringa nell’array è chiamata <em>argomento da linea di comando</em>.</p>
+<p>Gli <em>argomenti da linea di comando</em> permettono all’utente di modificare il comportamento dei programmi senza doverli ricompilare. Ad esempio, un programma di ordinamento potrebbe permettere all’utente di specificare in quale ordine gli elementi debbano essere disposti tramite un argomento da linea di comando come <em>–crescente</em> oppure <em>-decrescente</em>.</p>
+<p>Il programma <em>HelloWorld</em> ignora gli <em>argomenti da linea di comando</em>, ma generalmente bisogna verificare se tali argomenti esistono.</p>
+<p>Il corpo del metodo main è definito dalla parentesi di apertura <strong>{</strong> e la parentesi di chiusura <strong>}</strong>. Nel corpo del metodo main della classe <em>HelloWorld</em> troviamo una sola istruzione:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(<span class="st">&quot;HelloWorld!!&quot;</span>);</span></code></pre></div>
+<p>Tale istruzione utilizza la classe <code>System</code> della libreria di base di Java per stampare sullo schermo la scritta “HelloWorld!!”.</p>
+</body>
+</html>
